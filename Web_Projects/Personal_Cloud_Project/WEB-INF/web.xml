@@ -1,0 +1,75 @@
+<web-app
+xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+    version="5.0">
+
+<!-- Test or Sample Servlets-->
+<servlet>
+	<servlet-name>Sample_Servlet</servlet-name>	
+	<display-name>Welcome_Page</display-name>
+	<servlet-class>Personal_Cloud_Server_Side.Sample_Servlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Http_Servlet</servlet-name>	
+	<display-name>http</display-name>
+	<servlet-class>Personal_Cloud_Server_Side.HTTP_Servlet</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>Cloud_Directories</servlet-name>	
+	<display-name>Cloud_Directories</display-name>
+	<servlet-class>Personal_Cloud_Server_Side.Cloud_Directories</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>Servlet_Parameter_Analysis</servlet-name>	
+	<display-name>Servlet_Parameters</display-name>
+	<servlet-class>Personal_Cloud_Server_Side.Servlet_Parameter_Anal</servlet-class>
+</servlet>
+<!-- Project Servlets-->
+<servlet>
+	<servlet-name>File_Provider</servlet-name>	
+	<display-name>File_Provid</display-name>
+	<servlet-class>Personal_Cloud_Server_Side.File_Provider_Servlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Cloud_File_System</servlet-name>	
+	<display-name>Cloud_File_System</display-name>
+	<servlet-class>Personal_Cloud_Server_Side.Cloud_Dir_Service_Servlet</servlet-class>
+</servlet>
+
+<!-- Test or Sample Servlets Mapping-->
+<servlet-mapping>
+	<servlet-name>Sample_Servlet</servlet-name>
+	<url-pattern>/Sample_Servlet</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Http_Servlet</servlet-name>
+	<url-pattern>/http_test</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Cloud_Directories</servlet-name>
+	<url-pattern>/Cloud_Directories</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Servlet_Parameter_Analysis</servlet-name>
+	<url-pattern>/Servlet_Parameter_Analysis</url-pattern>
+</servlet-mapping>
+
+<!-- Project Servlets Mapping-->
+<servlet-mapping>
+	<servlet-name>File_Provider</servlet-name>
+	<url-pattern>/File_Provider</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Cloud_File_System</servlet-name>
+	<url-pattern>/Cloud_File_System</url-pattern>
+</servlet-mapping>
+
+
+</web-app>

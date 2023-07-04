@@ -1,0 +1,194 @@
+/* For Desktop Devices */
+@media only screen and (min-width:300px) and (max-height:1000px)
+{ 
+    body,html               /*  to remove the Spaces between tags and the Border of Browser Window*/
+    {
+        margin:0 0 0 0;
+        padding:0 0 0 0;
+        border:none;
+    }
+    html
+    {
+        color: #00ffff;
+        background-color: #000000;
+        border:none;
+    }
+    div
+    {
+        padding-left:0px;
+        font-family: Helvetica;
+        font-size: 20px;
+        font-weight:10;
+    }
+    h1
+    {
+        padding: 0%;
+        margin: 0%;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 10px;
+        width:99.3%;
+        position: relative;
+        color: #ffffff;
+        background-color: #080041;
+        z-index: 1;
+        opacity: 100%;
+        font-family: Helvetica;
+        font-size: 25px;
+        font-weight:10;
+    }
+    hr
+    {
+        color: #00ffff;
+        margin-top: 1;
+        margin-bottom: 3;
+    }
+    img
+    {
+        height:30px;
+        width:30px;
+        background-color: #5d40c7;
+    }
+    #Current_Directory_Label
+    {
+        display: inline-block;
+        margin:0;
+        margin-right: 0;
+        padding: 5px;
+        padding-right: 30px;
+        padding-left: 30px;
+        background-color: #202020;
+        color: #00ffff;
+    }
+    #Current_Directory
+    {
+        display: inline-block;
+        width:max-content;
+        margin:0;
+        padding:5px;
+        background-color: #ffc400;
+        color: #000000;
+    }
+    #Directories
+    {
+        width:100%;
+        padding: 0%;
+        margin: 0%;
+        background-color: #27283a;
+    }
+    .Directory_Links
+    {
+        display: inline-block;
+        background-color: #3700ff;
+        color: #ffffff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-left:50px;
+        padding-right:50px;
+        border: none;
+        border-radius: 7px;
+        font-family: Helvetica;
+        font-size: 17px;
+        font-weight:10;
+        transition: all 0.2s;
+        cursor: pointer;
+        font-weight:50;
+    }
+    .Directory_Links:hover
+    {
+        color: #000000;
+        background-color: #ffd000;
+    }
+    .Directory_Links span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.2s;
+    }
+    
+    .Directory_Links span:after {
+    content: '\00bb';
+    size: 100px;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -40px;
+    transition: 0.1s;
+    }
+    
+    .Directory_Links:hover span {
+    padding-left:25px;
+    padding-right: 25px;
+    }
+    .Directory_Links:hover span:after {
+    opacity: 1;
+    right: 0;
+    }
+    .File_Links
+    {
+        position:static;
+        width:fit-content;
+        display: inline-block;
+        background-color: #5d40c7;
+        color: #ffffff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding:60px;
+        padding-top:10px;
+        padding-bottom:10px;
+        border: none;
+        border-radius: 7px;
+        font-family: Helvetica;
+        font-size: 17px;
+        font-weight:10;
+        cursor: pointer;
+        text-align: center;
+        font-weight:50;
+    }
+    .File_Links:hover
+    {
+        color: #000000;
+        background-color: #ffd000;
+    }
+    .Icon
+    {
+        position:absolute;
+        margin:0;
+        margin-right: 10px;
+        margin-top: -10px;
+        margin-left: 10px;
+        width: 50px; /* Adjust the width and height as needed */
+        height: 40px;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        color: #000000;
+        background-color: #ffd000;
+        opacity: 0;
+    }
+    .File_Links:hover .Icon
+    {
+        opacity: 1;
+    }
+      
+}
+/* For Phones */
+@media only screen and (max-width:1500px) and (min-height:1000px)      /* For Phones */
+{
+    body,html               /*  to remove the Spaces between tags and the Border of Browser Window*/
+    {
+        margin:0 0 0 0;
+        padding:0 0 0 0;
+        border:none;
+    }
+    html
+    {
+        color: #00ffff;
+        background-color: #222222;
+    }
+}

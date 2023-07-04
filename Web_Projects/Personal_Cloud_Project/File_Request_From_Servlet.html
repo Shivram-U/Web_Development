@@ -1,0 +1,31 @@
+<html>
+    <h1>File request from a Servlet</h1>
+    <body style="background:#000000;color:#00ffff;">
+        <p id="content"></p>
+    </body>
+    <script>
+        var SERVLET_URL="/Personal_Cloud/File_Provider"; // Servlet URL
+        var FILE_NAME="temp";                                // Servlet Parameters
+        var FILE_TYPE="txt";                                // Servlet Parameters
+        var FILE_REQUEST_SERVLET_URL=SERVLET_URL+"?File_Name="+encodeURIComponent(FILE_NAME)+"&File_Type="+encodeURIComponent(FILE_TYPE);
+        var xhr = new XMLHttpRequest();
+        xhr.responseType = "blob";
+        xhr.open("GET",FILE_REQUEST_SERVLET_URL);
+        console.log("Setup Complete");
+        xhr.onload = function()
+        {
+            console.log("Request Sent");
+            if(xhr.status==200)
+            {
+                //console.log(xhr.responseText);
+                var blob = new Blob([xhr.response], { type: "application/txt" });
+                var link = document.createElement("a");
+                link.href = window.URL.createObjectURL(blob);
+                link.download = "temp.txt";
+                link.click();
+            }
+            console.log("Response received");
+        };
+        xhr.send();
+    </script>
+</html>
