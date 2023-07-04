@@ -1,0 +1,1 @@
+This is Cloud project developed with regard to Demonatration of Cloud Storage and Cloud Data Retrieval Process.
