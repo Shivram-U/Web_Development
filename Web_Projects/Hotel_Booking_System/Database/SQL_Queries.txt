@@ -1,0 +1,9 @@
+1.create table Clients(ClientID varchar(20) PRIMARY KEY,UserName varchar(40) UNIQUE,EmailID varchar(40) UNIQUE, Phone_Number varchar(15) UNIQUE, Password varchar(30) UNIQUE); 
+2.create table Bookings(ClientID varchar(30) ,BookingsID varchar(30) UNIQUE, FOREIGN KEY (ClientID) REFERENCES clients(ClientID));
+3.ALTER TABLE bookings ADD CONSTRAINT BookingsID UNIQUE (BookingsID);
+4.create table BookingData(BookingsID varchar(30) PRIMARY KEY, Rooms varchar(200), Food_Allotment varchar(200), FOREIGN KEY (BookingsID) REFERENCES   bookings(BookingsID));
+5.ALTER table bookings add Amount MEDIUMINT;
+6.ALTER TABLE Clients ADD Profile_Image MEDIUMBLOB;
+7.Alter table bookingdata add AC_Heated Char(1);
+8.Alter table bookingdata add FromDate Date,Add ToDate Date;
+9. Alter table bookingdata add RoomCount Integer, add From_Date varchar(1000), add To_Date varchar(1000);

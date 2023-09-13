@@ -1,0 +1,4 @@
+Commands:
+1. Servlet compilation:
+    PS C:\Applications\Application_Folders\Servers\Xampp\tomcat\webapps\System_Networking_WorkSpace\Hotel_Booking_System\WEB-INF\classes>
+    $ javac -cp "C:\Applications\Application_Folders\Servers\Xampp\tomcat\webapps\System_Networking_WorkSpace\Hotel_Booking_System\WEB-INF\lib\servlet-api.jar;." -d . DataBase_Access.java
