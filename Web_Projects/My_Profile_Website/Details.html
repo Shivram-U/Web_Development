@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html >
+    <link rel="stylesheet" href="Details.css">
+    <body>
+        <table id="tb">
+            <tr>
+                <td id="d1" class="Desc">Name</td><td id="v1" class="Vals"></td>
+            </tr>
+            <tr>
+                <td id="d2" class="Desc">Age</td><td id="v2" class="Vals"></td>
+            </tr>
+            <tr>
+                <td id="d3" class="Desc">Gender</td><td id="v3" class="Vals"></td>
+            </tr>
+            <tr>
+                <td id="d4" class="Desc">Qualification</td><td id="v4" class="Vals"></td>
+            </tr>
+            <tr>
+                <td id="d6" class="Desc">Mail ID</td><td id="v5" class="Vals"></td>
+            </tr>
+            <tr>
+                <td id="d5" class="Desc">Phone Number</td><td id="v6" class="Vals"></td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        // Events:
+        window.addEventListener('resize', function () { 
+            "use strict";                 // JavaScript Old Version, Implementation
+            //window.location.reload(); 
+            UI_Setup();
+        });
+    // Data Files Request and Parse:
+        fetch('./Data_Files/Details.json')
+        .then((response) => {
+        return response.json();
+        })
+        .then((data) => {
+        Assign_Values(data);
+        })
+        .catch( (err) => {
+        console.log(err);
+        });
+        let dc = document;
+        let val =60,op=100,lf = 410,extim=10;
+        window.onload = setTimeout(Assign_Values,0);
+        //window.onload = setTimeout(Position_Elements,0);
+        //window.onload = setTimeout(Extend,extim);
+        
+        /*
+        function Extend()
+        {
+            if(lf<650)
+                setTimeout(Extend,extim);
+            for(i=1;i<=6;i++)
+            {
+                // dc.getElementById("d"+i).style.opacity= op+"%";
+                // dc.getElementById("v"+i).style.opacity= op+"%";   
+                dc.getElementById("v"+i).style.left= lf+"px";   
+            }
+            extim+=1;
+            lf+=15; 
+        }*/
+        /*
+        function Position_Elements()
+        {
+            for(i=1;i<=6;i++)
+            {
+                dc.getElementById("v"+i).style.left= 650+"px";  
+                dc.getElementById("d"+i).style.marginTop= val+"px";
+                dc.getElementById("v"+i).style.marginTop= val+"px";
+                val+=70;
+            }
+        }*/
+        function Assign_Values(jsn_dt)
+        {
+            dc.getElementById('v1').innerHTML = jsn_dt.Name;
+            dc.getElementById('v2').innerHTML = jsn_dt.Age;
+            dc.getElementById('v3').innerHTML = jsn_dt.Gender;
+            dc.getElementById('v4').innerHTML = jsn_dt.Qualification;
+            dc.getElementById('v5').innerHTML = jsn_dt.Mail_ID;
+            dc.getElementById('v6').innerHTML = jsn_dt.Phone_Number;
+        }
+    </script>
+</html>

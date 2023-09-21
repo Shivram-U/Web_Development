@@ -1,0 +1,121 @@
+/* For Desktop Devices */
+@media only screen and (min-width:300px) and (max-height:1000px)
+{ 
+    body,html               /*  to remove the Spaces between tags and the Border of Browser Window*/
+    {
+        margin:0 0 0 0;
+        padding:0 0 0 0;
+        border:none;
+    }
+    html
+    {
+        color: #00ffff;
+        background-color: #b3b8ff;
+    }
+    #tb
+    {
+        position: relative;
+        margin-top:2%;
+        margin-left: 20%;
+        border-spacing: 0px 30px;
+    }
+    #tb td
+    {
+        padding: 1.5% 0% 1.5% 0%;
+    }
+    .Desc
+    {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        position: relative;
+        width:400px;
+        left: 0px;
+        z-index: 1;
+        opacity: 180%;
+        background-color: #000000;
+        font-family: Helvetica;
+        font-size: 175%;
+        text-align: center;
+        border-radius: 100px 0px 0px 100px;
+    }
+    .Vals
+    {
+        width:500px;
+        position: relative;
+        left:0px;
+        z-index: 0;
+        opacity: 100%;
+        /*left:410px;*/
+        color:#000000;
+        background-color: #455bff;
+        font-size: 175%;
+        font-family: Helvetica;
+        text-align: center;
+        border-radius: 0px 100px 100px 0px;
+    }
+    .Vals:hover
+    {
+        background-color: #000044;
+        color: #ffffff;
+    }
+}
+/* For Phones */
+@media only screen and (max-width:1500px) and (min-height:1000px)      /* For Phones */
+{
+    body,html               /*  to remove the Spaces between tags and the Border of Browser Window*/
+    {
+        margin:0 0 0 0;
+        padding:0 0 0 0;
+        border:none;
+    }
+    html
+    {
+        color: #00ffff;
+        background-color: #222222;
+    }
+    #tb
+    {
+        margin-top:60px;
+        margin-left: 3%;
+        border-spacing: 0px 130px;
+    }
+    .Desc
+    {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        width:300px;
+        left: 0px;
+        position: relative;
+        z-index: 1;
+        opacity: 100%;
+        width: 550px;
+        background-color: #3f3f3f;
+        font-family: Helvetica;
+        font-size: 70px;
+        text-align: center;
+        border-radius: 100px 0px 0px 100px;
+    }
+    .Vals
+    {
+
+        position: relative;
+        width:800px;
+        left:0px;
+        z-index: 0;
+        opacity: 100%;
+        /*left:410px;*/
+        background-color: #000000;
+        font-family: Helvetica;
+        font-size:80px;
+        text-align: center;
+        padding: 50px 0px 50px 0px;
+        border-radius: 0px 100px 100px 0px;
+    }
+    .Vals:hover
+    {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}

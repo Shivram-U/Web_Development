@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href = "index.css">
+<body>
+      <div ID = "HD">
+            <h1 id = "h">Shivram U</h1> 
+      </div>     
+                  <nav >
+                        <ul id="tb">
+                            <li><button type="button" class="tbs" id="det">Details</button></li>
+                            <li><button type="button" class="tbs" id="prof">Profile</button></li>
+                            <li><button type="button" class="tbs" id="res">Resume</button></li>
+                            <li><button type="button" class="tbs" id="fil">Files</button></li>
+                        </ul>
+                  </nav>
+      <!-- Page -->
+      <iframe id="page" title="Page" src="Details.html"></iframe>
+      <!--
+            <div class="field" id= "name">
+            <label style="padding:60px;"class="lb">Name:</label>
+            <label style="padding:100px;">Shivram</label><br>
+      </div>
+      -->
+</body>
+<script>
+      // Variables:
+      let doc = document;
+      let dat;
+      let Bw = window.innerWidth;               // Width remaining, after other components occupying the Web Page.
+      let Sw = window.screen.availWidth;        // Actual Width      
+      let Bh = window.innerHeight;              // Width remaining, after other components occupying the Web Page.
+      let Sh = window.screen.availHeight;       // Actual Height 
+      // Page UI Setup
+            //alert("meow");
+            // Header Dimension:
+            if(window.matchMedia("screen and ((min-width: 360px) and (max-width: 1000px) and (max-height: 1900px) and (min-height: 1600px))").matches)
+            {
+                  console.log("Mobile");
+                  doc.getElementById("h").style.width=Bw+"px";
+                  //doc.getElementById("h").style.background="#00ffff"
+                  doc.getElementById("h").style.marginLeft="0px";
+                  //console.log(doc.getElementById("h").offsetHeight);
+                  //doc.getElementById("HD").style.height=doc.getElementById("h").offsetHeight+"px";
+                  doc.getElementById("HD").style.width=Bw+"px";
+                  doc.getElementById("tb").style.width=Bw+"px";
+                  //console.log("{"+doc.getElementById("HD").offsetHeight);
+                  //doc.getElementById("page").style.marginTop=doc.getElementById("HD").offsetHeight+"px";
+                  doc.getElementById("page").style.width=Bw+"px";
+                  doc.getElementById("page").style.height=(Bh)-90+"px";
+            }
+            else if(window.matchMedia("screen and (min-width: 900px) and (max-width: 1600px)").matches)
+            {
+                  console.log("Laptop");
+                  doc.getElementById("h").style.width=Bw/2.5+"px";
+                  doc.getElementById("h").style.marginLeft=Bw/3.5+"px";
+                  //doc.getElementById("HD").style.height=doc.getElementById("h").offsetHeight+"px";
+                  doc.getElementById("HD").style.width=Bw+"px";
+                  doc.getElementById("tb").style.width=Bw+"px";
+                  //console.log(doc.getElementById("h").offsetHeight);
+                  //doc.getElementById("HD").style.height=doc.getElementById("h").offsetHeight+"px";
+                  //doc.getElementById("HD").style.width=Bw+"px";
+                  //doc.getElementById("tb").style.width=Bw+"px";
+                  ////console.log("{"+doc.getElementById("HD").offsetHeight);
+                  ////doc.getElementById("page").style.marginTop=doc.getElementById("HD").offsetHeight+"px";
+                  //doc.getElementById("page").style.width=Bw+"px";
+                  //doc.getElementById("page").style.height=(Bh)-90+"px";
+                  ////console.log(Bw+','+Sw+','+Bh+','+Sh)
+                  //let Detls_divs = [];
+            }
+            let val=0;
+            function fadeout()
+            {
+                  if(val<100)
+                        setTimeout(fadeout,50);
+                  let lia = document.getElementsByTagName("li");
+                  //alert("mewo");
+                  //console.log(lia);
+                  for(i=0;i<lia.length;i++)
+                  {
+                        lia[i].style.opacity=val+"%";
+                  }
+                  val+=10
+            }
+            function UI_Setup()
+            {      
+                  Bw = window.innerWidth;               
+                  Sw = window.screen.availWidth;              
+                  Bh = window.innerHeight;       
+                  Sh = window.screen.availHeight;  
+                        
+                  // Header Dimension:
+                        //doc.getElementById("h").style.width=Bw/2.5+"px";
+                        //doc.getElementById("h").style.marginLeft=Bw/3.5+"px";
+                        //doc.getElementById("HD").style.height=doc.getElementById("h").offsetHeight+"px";
+                        //console.log("{"+doc.getElementById("HD").offsetHeight);
+                        //doc.getElementById("page").style.marginTop=doc.getElementById("HD").offsetHeight+"px";
+                        doc.getElementById("page").style.width=Bw+"px";
+                        doc.getElementById("page").style.height=(Bh)-90+"px";
+                  console.log(Bw+','+Sw+','+Bh+','+Sh)
+                  let Detls_divs = [];
+                  window.onload = setTimeout(fadeout,0);
+            }  
+             
+      // Events
+            document.getElementById("det").onclick= () => {doc.getElementById("page").src="Details.html"};
+            document.getElementById("prof").onclick= () => {doc.getElementById("page").src="Profile.html"};
+            document.getElementById("res").onclick= () => {doc.getElementById("page").src="Shivram_U_Resume.pdf"};
+            document.getElementById("fil").onclick= () => {doc.getElementById("page").src="Files.html"};
+            window.onload = setTimeout(fadeout,0);
+            setTimeout(UI_Setup,0);
+            window.addEventListener('resize', function () { 
+                  "use strict";                 // JavaScript Old Verison, Implementation
+                  //window.location.reload();   // Do not use reload, when hosted in Cloud ,
+                  // since reload will request the entire Web Document, from the Server, which will take nearly 3-5 seconds, which will not look good, during resizing.
+                  UI_Setup();             
+                  
+            });
+      
+</script>
+</html>
+
