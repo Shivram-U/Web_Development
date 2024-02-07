@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Get the size of the current screen/window</h2>
+<p>The example displays the browser window's height and width: (NOT including toolbars/scrollbars)
+
+<p id="demo"></p>
+
+<script>
+var interval = setInterval(function() {
+    document.getElementById('timer_div').innerHTML = --seconds_left;
+
+    if (seconds_left <= 0)
+    {
+        document.getElementById('timer_div').innerHTML = 'You are ready';
+        clearInterval(interval);
+    }
+}, 100);
+var Bw = window.innerWidth;
+var Sw = window.screen.availWidth;
+var Bh = window.innerHeight;
+var Sh = window.screen.availHeight;
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser width: " + Bw + ", height: " + Bh + ".\n"+"Screen Display width: " + Sw + ", Screen Display height: " + Sh + ".";
+</script>
+
+</body>
+</html>

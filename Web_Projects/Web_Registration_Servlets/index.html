@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html id ="wh" land="en">
+<link rel="stylesheet" href ="index_design.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<h1 id = "head">Tech Community</h1>
+<!--<canvas id = "net_anim"></canvas>-->
+<body>
+<div id = "lin1"></div>
+<img id = "div-bg" src="tech3.jpg">
+<button  id = "reg" onclick="window.location.href='Registration.html'" >Register</button>
+</body>
+<!--
+        The below script is used to get the height and width of the Body of the HTML Page, 
+        based on the Resolution of the Window of the Device.
+-->
+<script>
+    var doc = document;
+    var val = 0,hdinf=30,strt=15;
+    var pos = [35],lens = [0];
+    window.onload = setTimeout(fadeout,hdinf);
+    val=0;
+    window.onload = setTimeout(stretch,strt);
+    val=0;
+    window.onload = setTimeout(SetContent,700);
+    function fadeout()
+    {
+        if(val<100)
+            setTimeout(fadeout,hdinf);
+        doc.getElementById("head").style.opacity = val+"%";
+        doc.getElementById("div-bg").style.opacity = val+"%";
+        doc.getElementById("head").style.top = pos[0]+"px";
+        //doc.getElementById("head").textContent = pos[0];
+        doc.getElementById("reg").style.opacity = val+"%";
+        val+=10;
+        if(pos[0]>10)
+            pos[0]-=3.5;
+    }
+    function stretch()
+    {
+        if(lens[0]<900)
+            setTimeout(stretch,strt);
+        //doc.getElementById("lin1").textContent = lens[0];
+        doc.getElementById("lin1").style.width = lens[0]+"px";
+        lens[0]+=10;
+        if(lens[0]<900)
+        lens[0]+=10;
+    }
+    
+    function SetContent()
+    {
+        doc.getElementById("lin1").textContent = "Welcome to Tech community, we are very pleased for you to know about usPlease, join our community and let your brain wings grow, along with other members of the Community";
+        doc.getElementById("lin1").style.padding = "20px";
+    }
+</script>
+</html>

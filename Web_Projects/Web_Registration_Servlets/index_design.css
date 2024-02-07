@@ -1,0 +1,226 @@
+/* For Portrait Screen Devices, in which the Web page is opened*/
+@media screen and ((min-width: 360px) and (max-width: 490px) and (max-height: 1900px) and (min-height: 1600px)) /*or ((max-width:700px) and (min-width:800px) and (max-height:300px) and (max-height:400px))*/
+{
+    #wh
+    {
+        background-color: #000000;
+    }
+    h1
+    {
+        background-color: #333333;
+        font-family: "Helvetica";
+        font-weight: 1;
+        color: #00ffff;
+        font-size:xx-large;
+        text-align: center;
+        margin:0% 0%;
+    }
+    #bd
+    {
+        background-image: url('tech5.jpg');
+        background-repeat: no-repeat;
+        background-position: fixed;
+        background-size: 100% 100%;
+        overflow-x:hidden;
+        overflow-y:hidden;
+    }
+    #intro
+    {
+        color: #00ffff;
+        background-color: #111111;
+        padding-left:100px;
+    }
+    #reg
+    {
+        background-color: #222222;
+        font-family: "Helvetica";
+        font-size: larger;
+        font-size: x-large;
+        color: #00ffff;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 400px 500px;
+    }
+}
+
+/* For landscape Screen Devices, in which the Web page is opened*/
+@media screen and (min-width: 1001px) and (max-width: 1600px)
+{
+    
+    h1
+    {
+        opacity: 0%;
+        position: absolute;
+        width: 1530px;
+        border-radius: 20px;
+        float:inline-end;
+        font-family: "Helvetica";
+        background:#0f2f2f;
+        font-weight: 1;
+        color: #00ffff;
+        font-size:xx-large;
+        text-align: center;
+        margin:0px 0px 0px 0px; 
+        padding: 4px 0px 4px 0px;
+        border: 0px;
+        size: 600px;
+        left:0px;
+        top:35px;
+        right:20px;
+    }
+    #net_anim
+    {
+        position:absolute;
+        background-color: whitesmoke;
+        top:120px;
+        height:500px;
+        width:800px;
+    }
+    #lin1
+    {
+        z-index: 1;
+        position:absolute;
+        width:0px;
+        border-radius: 20px;
+        color: #00dddd;
+        margin: 0px 0px 0px 0px;
+        padding: 20px 20px 65px 20px;
+        top:100px;
+        left:400px;
+        resize: both;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 20px;
+        background-color: #333333;
+        margin: 0px 0px 0px 0px;
+    }
+    #div-bg
+    {
+        z-index: 0;
+        position:absolute;
+        width:1535px;
+        height:640px;
+        border-radius: 20px;
+        color: #00dddd;
+        margin: 0px 0px 0px 0px;
+        top:60px;
+        left:0px;
+        resize: both;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 20px;
+        background-color: #333333;
+        margin: 0px 0px 0px 0px;
+    }
+    #wh
+    {
+        background-color: #000000;
+    }
+    #intro
+    {
+        color: #00dddd;
+        padding-left:50px;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+    #reg
+    {
+        border-radius: 20px;
+        margin: 0px 0px 0px 0px;
+        border-style:hidden;
+        position: relative;
+        left:550px;
+        top: 400px;
+        background-color: #222222;
+        font-family: "Helvetica";
+        font-style: oblique;
+        font-size: x-large;
+        color: #00ffff;
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #reg:hover
+    {
+        border-style: groove;
+        border-color: #00ffff;
+    }
+    #reg:active
+    {
+        border-style: groove;
+        color: #ffffff;
+        border-color: #ffffff;
+        background-color: #333333;
+    }
+}
+
+/* For landscape Screen Devices, in which the Web page is opened*/
+@media screen and (min-width: 500px) and (max-width: 1000px)
+{
+    h1
+    {
+        font-family: "Helvetica";
+        background:#111111;
+        font-weight: 1;
+        color: #ffffff;
+        font-size:xx-large;
+        text-align: center;
+        margin:0% 0% ;
+    }
+    #lin1
+    {
+        color: #00dddd;
+        padding-left:50px;
+        resize: both;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+    #lin2
+    {
+        color: #00dddd;
+        padding-left:50px;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+    #wh
+    {
+        resize: none;
+        background-image: url('net.jpg');
+        background-repeat: no-repeat;
+        background-position: fixed;
+        background-size: 100% 100%;
+        /*width:1170px;
+        height:auto;*/
+        /*width: 1170px;
+        height: 2100px;*/
+        overflow-x:hidden;
+        overflow-y:hidden;
+    }
+    #bd
+    {
+    }
+    #intro
+    {
+        color: #00dddd;
+        padding-left:50px;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+    #reg
+    {
+    
+        position: relative;
+        left:500px;
+        top: 400px;
+        background-color: #222222;
+        font-family: "Helvetica";
+        font-style: oblique;
+        font-size: x-large;
+        color: #00ffff;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html id ="wh" land="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href ="Registration_Design.css">
+    <h1 id = "head"> Community Registration</h1>
+    <div class = "tag" id = "frm_bg"></div>
+    <div class = "tag" id = "prf_bg">
+    <div id = "prf_bg_frm" action="Life_Cycle_Servlet" method="post"></div>
+    <label id = "prf_bg_frm_t">Upload Profile Photo</label>
+    <label id = "id_file">Id Proof</label>
+    </div>
+    <!--   <form  method = "post" action="/Deployment_Directory_From_Server/Registration" autocomplete="off">     -->
+    <form  method = "post" action="/Registration_Web_App/Registration" autocomplete="off">
+        <label class = "frml" id = "labl1">Name</label>
+        <input class = "frmi" id = "tinp1" name = "Name" type="textarea"><br>
+        <label class = "frml" id = "labl2">DOB</label>
+        <input class = "frmi" id = "tinp2" name = "DOB" type="textarea"><br>
+        <label class = "frml" id = "labl3">Address</label>
+        <input class = "frmi" id = "tinp3" name = "Address" type="textarea"><br>
+        <label class = "frml" id = "labl4">Profession/Education</label>
+        <input class = "frmi" id = "tinp4" name = "Prof_Educ" type="textarea"><br>
+        <label class = "frml" id = "labl5">Mail ID</label>
+        <input class = "frmi" id = "tinp5" name = "MailID" type="textarea"><br>
+        <label class = "frml" id = "labl6">Phone Number</label>
+        <input class = "frmi" id = "tinp6" name = "PhNum" type="textarea"><br>
+        <label class = "frml" id = "labl7">Password</label>
+        <input class = "frmi" id = "tinp7" name = "Pword" type="textarea"><br>
+        <input  id = "sub1" type="submit">
+    </form>
+    <img id = "Profile_Photo" src="" >
+    <body id = "bd">
+    </body>
+
+<script>
+    var val =0,pos=[35],contfin = 60,hdfin = 30;
+    var doc = document;
+    //document.location.href = "/Registration_Web_App/Registration">
+    
+    function Upload_Photo()
+    {
+        document.location;
+        //doc.getElementById("head").style.background = "#ff0000"
+    }
+    Design_Form();
+    window.onload=setTimeout(Head_FadeIn,hdfin);
+    val=0;
+    window.onload=setTimeout(Content_FadeIn,contfin);
+    function Head_FadeIn()
+    {
+        if(val<100)
+            setTimeout(Head_FadeIn,hdfin);
+        doc.getElementById("head").style.opacity = val+"%";
+        doc.getElementById("frm_bg").style.opacity = val+"%";
+        doc.getElementById("prf_bg").style.opacity = val+"%";
+        doc.getElementById("sub1").style.opacity = val+"%";
+        doc.getElementById("head").style.top = pos[0]+"px";
+        //doc.getElementById("head").textContent = val;
+        val+=10;
+        if(pos[0]>10)
+            pos[0]-=3.5;
+    }
+    function Content_FadeIn()
+    {
+        if(val<100)
+            setTimeout(Content_FadeIn,contfin);
+        for(let i = 1;i<=7;i++)
+        {
+            doc.getElementById("labl"+i).style.opacity = val+"%";
+            doc.getElementById("tinp"+i).style.opacity = val+"%";
+        }
+    }
+    function Design_Form()
+    {
+        var temp,top_pad = 150;
+        for(let i=1;i<=7;i++)
+        {
+            //document.getElementById("labl"+i).style.background = "#00ffff";
+            document.getElementById("labl"+i).style.top = top_pad+"px";
+            document.getElementById("tinp"+i).style.top = top_pad-10+"px";
+            top_pad+=60;
+        }
+    }
+</script>
+</html>

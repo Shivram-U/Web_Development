@@ -1,0 +1,38 @@
+<web-app
+xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+    version="5.0">
+
+<servlet>
+	<servlet-name>First_Servlet</servlet-name>	
+	<display-name>Welcome_Page</display-name>
+	<servlet-class>Servlet_Package.Welcome_Servlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Life_Cycle_Servlet</servlet-name>	
+	<display-name>Life_Cycle_Servlet</display-name>
+	<servlet-class>Servlet_Package.Life_Cycle_Servlet</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>TechCommunity_Registration_Servlet</servlet-name>	
+	<display-name>TechCommunity_Registration_Servlet</display-name>
+	<servlet-class>Servlet_Package.TechCommunity_Registration_Servlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>First_Servlet</servlet-name>
+	<url-pattern>/Welcome</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Life_Cycle_Servlet</servlet-name>
+	<url-pattern>/Life_Cycle</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>TechCommunity_Registration_Servlet</servlet-name>
+	<url-pattern>/Registration</url-pattern>
+</servlet-mapping>
+
+</web-app>
